@@ -195,7 +195,7 @@ impl<F, T>
             status: enums::AttemptStatus::from(item.response.status.status_code),
             response: Ok(types::PaymentsResponseData::TransactionResponse {
                 resource_id: types::ResponseId::ConnectorTransactionId(
-                    item.response.order_id.clone()
+                    item.response.order_id.clone(),
                 ),
                 redirection_data: None,
                 mandate_reference: None,

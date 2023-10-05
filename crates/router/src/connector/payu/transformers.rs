@@ -202,9 +202,9 @@ impl<F, T>
                 connector_metadata: None,
                 network_txn_id: None,
                 connector_response_reference_id: item
-                     .response
-                     .ext_order_id
-                     .or(Some(item.response.order_id)),
+                    .response
+                    .ext_order_id
+                    .or(Some(item.response.order_id)),
             }),
             amount_captured: None,
             ..item.data

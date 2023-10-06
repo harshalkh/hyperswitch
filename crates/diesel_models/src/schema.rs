@@ -398,6 +398,8 @@ diesel::table! {
         end_date -> Nullable<Timestamp>,
         metadata -> Nullable<Jsonb>,
         connector_mandate_ids -> Nullable<Jsonb>,
+        #[max_length = 64]
+        original_payment_id -> Nullable<Varchar>,
     }
 }
 
@@ -609,7 +611,6 @@ diesel::table! {
         #[max_length = 64]
         merchant_decision -> Nullable<Varchar>,
         payment_confirm_source -> Nullable<PaymentSource>,
-        payment_type -> Nullable<PaymentType>,
     }
 }
 
